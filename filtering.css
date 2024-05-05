@@ -1,0 +1,157 @@
+/* < 1280 width overall */
+/* 20px margins */
+
+body {
+    font-family: 'ZCOOL_XiaoWei', 'Lobster', 'Baloo_Paaji_2';
+    background: #39c5bb;
+    width: 100%;
+    margin: 0;
+    padding: 0;
+}
+canvas {
+    display: block;
+    border: 1px solid rgb(87, 78, 78);
+    box-shadow: 3px 3px 3px rgba(0, 0, 0, 0.4);
+}
+
+#title {
+    display: inline-block;
+    font-family: 'Lobster', 'Baloo_Paaji_2', 'ZCOOL_XiaoWei';
+    font-size: 2rem;
+    padding: 5px 0;
+    margin-top: 20px;
+}
+
+#wrapper {
+    width: 1260px;
+    position: relative;
+    margin: 20px auto 0 auto;
+}
+
+
+#columns {
+    margin-top: 20px;
+}
+
+#left {
+    float: left;
+}
+
+#right {
+    float: left;
+    margin-left: 20px;
+}
+
+#filterer {
+    left: 0;
+    z-index: 0;
+}
+
+#image-toggle {
+    font-size: 13px;
+    margin-top: 10px;
+    width: 512px;
+}
+
+#image-toggle>button {
+    font-size: 20px;
+    font-weight: 600;
+    width: 60px;
+    float: right;
+    display: block;
+}
+
+#previous {
+    margin-right: 5px;
+}
+
+button {
+    display: inline-block;
+    padding: 10px 15px;
+    border: none;
+    border-radius: 2px;
+    color: #0a0c0a;
+    background-color: #f0f3f1;
+    text-align: center;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+  
+
+  
+button:active {
+    box-shadow: 0 3px rgba(88, 86, 86, 0.5);
+    transform: translateY(3px);
+}
+
+#editor-wrapper {
+    z-index: 0;
+    position: relative;
+    margin-top: 20px;
+}
+
+#instructions {
+    position: absolute;
+    top: 5px;
+    right: 5px;
+    text-align: right;
+    font-size: 12px;
+
+    pointer-events: none;
+}
+
+#editor {
+}
+
+#chart-wrapper {
+    z-index: 0;
+    position: relative;
+}
+
+#chart {
+}
+
+.label {
+    font-size: 13px;
+    position: absolute;
+    z-index: 5;
+}
+
+#frequency {
+    right: 5px;
+    bottom: 5px;
+}
+
+#frequency2 {
+    right: 5px;
+    bottom: 5px;
+}
+
+#power {
+    left: 5px;
+    top: 5px;
+}
+
+#gain {
+    left: 5px;
+    top: 5px;
+}
+
+#info {
+    font-size: 15px;
+    line-height: 20px;
+    padding: 10px 10px;
+    margin-top: 10px;
+    display: inline-block;
+}
+
+#github {
+    margin-right: -50px;
+}
+
+#footer {
+    text-align: right;
+    font-size: 14px;
+    font-family: 'Lobster', 'Baloo_Paaji_2', 'ZCOOL_XiaoWei';
+}
+

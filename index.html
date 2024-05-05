@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Fourier Image Filtering</title>
+        <meta charset="utf-8">
+        <meta name="author" content="slacr">
+        <meta name="description" content="计算机视觉作业， 傅里叶变换实现图像滤波， 重邮21级网工二班slacr， 2024-5-5">
+        <link href="//cdn.jsdelivr.net/gh/s1acr/my_jsDelivr@main/googleFonts/myblog.css" rel="stylesheet">
+        <link href="filtering.css" rel="stylesheet">
+    </head>
+
+    <body>
+        <div id="wrapper">
+            <div id="title">Fourier-Image-Filtering</div>
+
+            <div id="columns">
+
+                <div id="left">
+                    <canvas id="filterer" width="512" height="512"></canvas>
+                    <div id="image-toggle">
+                        <button id="next">&gt;</button>
+                        <button id="previous">&lt;</button>
+                    </div>
+                    <button id="gaussian">高斯模糊</button>
+                    <button id="sharpen">图像锐化</button>
+                    <button id="edges">边缘检测</button>
+                </div>
+                <div id="right">
+                    <div id="chart-wrapper">
+                        <canvas id="chart" width="720" height="225"></canvas>
+
+                        <div id="power" class="label">Power</div>
+                        <div id="frequency" class="label">Frequency</div>
+                    </div>
+
+                    <div id="editor-wrapper">
+                        <canvas id="editor" width="720" height="150"></canvas>
+
+                        <div id="gain" class="label">Gain</div>
+                        <div id="frequency2" class="label">Frequency</div>
+
+                        <div id="instructions">
+                            单击曲线以添加点<br/>
+                            单击并拖动点来移动它们
+                        </div>
+                    </div>
+
+                    <div id="info">
+                        * 根据傅里叶变换， 任何图像都可以分解为许多不同频率的许多正弦曲线的总和<br/>
+                        * 上方是图像的频谱图，显示不同频率下正弦曲线的幅度。<br/>
+                        * 下方是正弦波幅度的频率响应曲线，编辑它来完成图像滤波。<br/>
+                        * 使用左边预置的滤波曲线来完成图像的风格化。
+
+                    </div>
+
+                    <div id="footer">
+                        
+                        <iframe id="github"
+                        src="https://ghbtns.com/github-btn.html?user=s1acr&repo=maze-algo&type=watch&count=true&size=large&v=2"
+                        frameborder="0" scrolling="0" width="170" height="30" title="GitHub">
+                        </iframe>
+                        <br>
+                        <small id="copy"> <big>&copy;slacr </big> 2024-5</small>
+                    </div>
+                </div>
+
+            </div>
+
+            <br/>
+        </div>
+
+        <script src="shared.js"></script>
+        <script src="curve.js"></script>
+        <script src="filterer.js"></script>
+        <script src="chart.js"></script>
+        <script src="main.js"></script>
+    </body>
+</html>
